@@ -1,0 +1,60 @@
+http://www.azair.eu/azfin.php?
+searchtype=flexi
+&tp=0   									 # niepotrzebne
+&isOneway=return
+&srcAirport=Warszawa+%5BWAW%5D+%28%2BWMI%29  # 'Warszawa' niepotrzebne
+&srcap0=WMI   								 # niepotrzebne
+&srcFreeAirport=&srcTypedText=war			 # niepotrzebne
+&srcFreeTypedText=&srcMC=WAR_ALL			 # niepotrzebne
+&dstAirport=Gdziekolwiek+%5BXXX%5D			 # 'Gdziekolwiek' niep
+&anywhere=true
+&dstap0=LIN									 # niepotrzebne
+&dstap1=BGY									 # niepotrzebne
+&dstFreeAirport=&dstTypedText=gdziek		 # niepotrzebne
+&dstFreeTypedText=&dstMC=&depmonth=201908    # niepotrzebne
+&depdate=2019-08-25
+&aid=0									     # niepotrzebne
+&arrmonth=201908							 # niepotrzebne
+&arrdate=2019-08-31							 
+&minDaysStay=5
+&maxDaysStay=8
+&dep0=true									# niepotrzebne od tego
+&dep1=true									
+&dep2=true
+&dep3=true
+&dep4=true
+&dep5=true
+&dep6=true
+&arr0=true
+&arr1=true
+&arr2=true
+&arr3=true
+&arr4=true
+&arr5=true
+&arr6=true								    # niepotrzebne do tego
+&samedep=true
+&samearr=true
+&minHourStay=0%3A45
+&maxHourStay=23%3A20
+&minHourOutbound=0%3A00
+&maxHourOutbound=24%3A00
+&minHourInbound=0%3A00
+&maxHourInbound=24%3A00
+&autoprice=true
+&adults=1
+&children=0
+&infants=0&maxChng=0
+&currency=PLN
+&indexSubmit=Szukaj
+
+
+
+
+
+
+
+
+
+
+
+

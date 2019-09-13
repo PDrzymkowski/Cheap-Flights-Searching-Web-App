@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>Here you can display flights routes limited to the given price: </h2>
+
+
+<form method='POST' action='/filter_results'>
+<table>
+    <p>The only flights displayed will be those of lower or equal price than given</p>
+    <p>Change the price here:</p>
+    <tr><td>Max price: </td><td><input name='max_price' type='TEXT' width='20' value = '100'></td></tr>
+</table>
+    <p> When you are ready click the button:</p>
+<p><input value='OK' type='SUBMIT'></p>
+</form>
+{% endblock %}

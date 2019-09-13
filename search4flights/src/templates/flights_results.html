@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+        {% block stylesheet_block %}
+            <link rel="stylesheet" href="../../static/hf.css" />
+        {% endblock %}
+
+        {% block back_home %}
+                <a href="../flights_list">Back to flights list</a>
+        {% endblock %}
+
+{% block body %}
+
+<h2>Here are the results of your query:</h2>
+
+<table>
+        <tr>
+                {% for row_title in the_row_titles %}
+                        <th>{{row_title}}</th>
+                {% endfor %}
+        </tr>
+        {% for flights_results in the_data %}
+         <tr>
+                 {% for result in flights_results %}
+                        <td>{{result}}</td>
+                 {% endfor %}
+         </tr>
+        {% endfor %}
+</table>
+
+{% endblock %}

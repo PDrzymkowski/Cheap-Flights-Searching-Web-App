@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% block body %} 
+
+<h2>Change parametres of your flight search engine: </h2>
+<p>Your application will search for flights every 'x' given seconds in the 'Search delay' input below</p>
+<p>Upon changing the 'Search Delay' parameter, please restart your application</p>
+
+
+
+<form method='POST' action='/change_app_param_data'>
+    <table>
+        <p>Change the parametres here:</p>
+        <tr><td>Search delay[s]: </td><td><input name='search_delay' type='TEXT' width='60' value = {{ the_search_delay }}></td></tr>
+    </table>
+    <p> When you are ready click the button:</p>
+    <p><input value='OK' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

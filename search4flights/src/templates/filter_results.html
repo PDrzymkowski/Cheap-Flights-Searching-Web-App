@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+        {% block back_home %}
+                <a href="filter_flights">Back to flights list</a>
+        {% endblock %}
+
+{% block body %}
+
+<h2>Here are the results of your query (flights under price {{ the_max_price }}):</h2>
+
+<table>
+        <tr>
+                {% for row_title in the_row_titles %}
+                        <th>{{row_title}}</th>
+                {% endfor %}
+        </tr>
+    {% for the_data in the_data_tables %}
+        {% for flights_results in the_data %}
+         <tr>
+                 {% for result in flights_results %}
+                        <td>{{result}}</td>
+                 {% endfor %}
+         </tr>
+        {% endfor %}
+    {% endfor %}
+</table>
+
+{% endblock %}

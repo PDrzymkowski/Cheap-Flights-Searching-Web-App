@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ the_title }}</title>
+        {% block stylesheet_block %}
+             <link rel="stylesheet" href="static/hf.css" />
+        {% endblock %}
+    </head>
+    <body>
+
+
+        {% block back_home %}
+        <a href="home">Back to menu</a>
+        {% endblock %}
+
+        {% block body %}
+        {% endblock %}
+
+    </body>
+</html>

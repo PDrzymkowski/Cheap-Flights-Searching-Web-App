@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block body %} 
+
+<h2>Change parametres of your flights searching results: </h2>
+
+<form method='POST' action='/change_flight_search_data'>
+<table>
+<p>Change the parametres here:</p>
+<tr><td>Departure place: </td><td><input name='srcAirport' type='TEXT' width='20' value = {{ the_src_airport }}></td></tr>
+<tr><td>Arrival place: </td><td><input name='dstAirport' type='TEXT' width='20' value = {{ the_dst_airport }}></td></tr>
+<tr><td>Departure date: </td><td><input name='depdate' type='date' width='20' value = {{ the_dep_date }}></td></tr>
+<tr><td>Arrival date: </td><td><input name='arrdate' type='date' width='20' value = {{ the_arr_date }}></td></tr>
+<tr><td>Min days: </td><td><input name='minDaysStay' type='TEXT' width='5' value = {{ the_min_days }}></td></tr>
+<tr><td>Max days: </td><td><input name='maxDaysStay' type='TEXT' width='5' value = {{ the_max_days }}></td></tr>
+<tr><td>Adults: </td><td><input name='adults' type='number' min="0" step="1" width='5' value = {{ the_adults }}></td></tr>
+<tr><td>Children: </td><td><input name='children' type='number' min="0" step="1" width='5' value = {{ the_children }}></td></tr>
+<tr><td>Infants: </td><td><input name='infants' type='number' min="0" step="1" width='5' value = {{ the_infants }}></td></tr>
+<tr><td>Changes: </td><td><input name='maxChng' type='number' min="0" step="1" width='5' value = {{ the_changes }}></td></tr>
+<tr><td>Currency: </td><td><input name='currency' type='TEXT' width='5' value = {{ the_currency }}></td></tr>
+
+</table>
+<p> When you are ready click the button:</p>
+<p><input value='OK' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
+
+

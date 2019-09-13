@@ -1,0 +1,71 @@
+http://www.azair.eu/azfin.php?
+searchtype=flexi
+&isOneway=return
+&srcAirport=%5BWAW%5D+%28%2BWMI%29  
+&dstAirport=%5BXXX%5D
+&anywhere=true
+&depdate=2019-08-25
+&arrdate=2019-08-31
+&minDaysStay=5
+&maxDaysStay=8
+&samedep=true
+&samearr=true
+&minHourStay=0%3A45
+&maxHourStay=23%3A20
+&minHourOutbound=0%3A00
+&maxHourOutbound=24%3A00
+&minHourInbound=0%3A00
+&maxHourInbound=24%3A00
+&autoprice=true
+&adults=1
+&children=0
+&infants=0
+&maxChng=0
+&currency=PLN
+&indexSubmit=Szukaj
+
+
+
+# app.config['flightconfig'] = { 'srcAirport': '%5BWAW%5D+%28%2BWMI%29 ',
+#                                'dstAirport': '%5BXXX%5D',
+#                                'anywhere': 'true',
+#                                'depdate': '2019-09-01',
+#                                'arrdate': '2019-08-31',
+#                                'minDaysStay': '5',
+#                                'maxDaysStay': '8',
+#                                'samedep': 'true',
+#                                'samearr': 'true',
+#                                'minHourStay': '0%3A45',
+#                                'maxHourStay': '23%3A20',
+#                                'minHourOutbound': '0%3A00',
+#                                'maxHourOutbound': '24%3A00',
+#                                'minHourInbound': '0%3A00',
+#                                'maxHourInbound': '24%3A00',
+#                                'autoprice': 'true',
+#                                'adults': '1',
+#                                'children': '0',
+#                                'infants': '0',
+#                                'maxChng': '0',
+#                                'currency': 'PLN',
+# }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

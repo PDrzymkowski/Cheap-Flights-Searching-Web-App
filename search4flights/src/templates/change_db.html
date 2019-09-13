@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block body %} 
+
+<h2>Change parametres of your database connection: </h2>
+
+
+
+<form method='POST' action='/change_db_data'>
+<table>
+<p>Change the parametres here:</p>
+<tr><td>Host: </td><td><input name='host_name' type='TEXT' width='60' value = {{ the_host }}></td></tr>
+<tr><td>User: </td><td><input name='user_name' type='TEXT' width='60' value = {{ the_user }}></td></tr>
+<tr><td>Password: </td><td><input name='password_name' type='TEXT' width='60' value = {{ the_password }}></td></tr>
+<tr><td>Database name: </td><td><input name='database_name' type='TEXT' width='60' value = {{ the_database }}></td></tr>
+</table>
+<p> When you are ready click the button:</p>
+<p><input value='OK' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
