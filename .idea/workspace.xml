@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97631274-73a4-4836-9eb4-6936ef852fbf" name="Default Changelist" comment="" />
+    <list default="true" id="97631274-73a4-4836-9eb4-6936ef852fbf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/static/hf.css" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/static/hf.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/change_app_param.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/change_app_param.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/change_db.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/change_db.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/change_flight_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/change_flight_search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/delete_flights.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/delete_flights.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/filter_flights.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/filter_flights.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/filter_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/filter_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/flights_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/flights_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/flights_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/flights_results.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

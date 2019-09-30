@@ -1,12 +1,14 @@
 {% extends 'base.html' %} 
 
 {% block body %} 
-
+<div class="bordered">
 <h2>Here are flights searching results: </h2>
-
+<div class="listing">
 <p>
 {% for flights_result in flights_results %}
     <p><a href="show_results/{{flights_result}}"}> {{ flights_result }} </a> </p>
 {% endfor %}
 </p>
+    </div>
+    </div>
 {% endblock %}

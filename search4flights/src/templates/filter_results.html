@@ -8,6 +8,7 @@
 
 <h2>Here are the results of your query (flights under price {{ the_max_price }}):</h2>
 
+<div class="listing_filtered">
 <table>
         <tr>
                 {% for row_title in the_row_titles %}
@@ -24,5 +25,6 @@
         {% endfor %}
     {% endfor %}
 </table>
+</div>
 
 {% endblock %}

@@ -1,18 +1,71 @@
 body {
-  font-family:      Verdana, Geneva, Arial, sans-serif;
+  font-family:      Sylfaen;
   font-size:        medium;
+  background-image: url("background.jpg");
   background-color: tan;
   margin-top:       5%;
   margin-bottom:    5%;
   margin-left:      10%;
   margin-right:     10%;
-  border:           1px dotted gray;
+ /* border:           1px dotted gray; */
   padding:          10px 10px 10px 10px;
 }
+
+.bordered{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
+    border-style: outset;
+    width: 800px;
+}
+
+.bordered_entry{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
+    width: 600px;
+    height: 250px;
+    border-style: outset;
+}
+
+.listing{
+     margin:4px, 4px;
+     padding:4px;
+     background: linear-gradient(153deg, rgba(255,255,255,1) 0%, rgba(25,74,194,0.7091970577293417) 96%);
+     width: 500px;
+     height: 710px;
+     overflow-x: hidden;
+     overflow-x: auto;
+     text-align:justify;
+}
+
+.listing_filtered{
+     margin:4px, 4px;
+     padding:4px;
+     width: 1600px;
+     height: 710px;
+     overflow-x: hidden;
+     overflow-x: auto;
+     text-align:justify;
+}
+
+.listing_results{
+     margin:4px, 4px;
+     padding:4px;
+     width: 1600px;
+     height: 200px;
+     overflow-x: hidden;
+     overflow-x: auto;
+     text-align:justify;
+}
+
 a {
   text-decoration:  none; 
-  font-weight:      600; 
+  font-weight:      600;
+  margin: 0 0 10px 0;
 }
+li {
+  margin: 0 0 10px 0;
+
+}
+
+
 a:hover {
   text-decoration:  underline;
 }
@@ -48,7 +101,7 @@ td, th {
 
 table {
 font-size:          1em;
-background-color:   #fafcff;
+background-color:   #ffffff;
 border:             1px solid #909090;
 color:              #2a2a2a;
 padding:            5px 5px 2px;
