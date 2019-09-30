@@ -15,6 +15,9 @@ body {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
     border-style: outset;
     width: 800px;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px;
+    border-radius: 20px;
 }
 
 .bordered_entry{
@@ -22,6 +25,15 @@ body {
     width: 600px;
     height: 250px;
     border-style: outset;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px;
+    border-radius: 20px;
+}
+
+.home_label{
+     color: white;
+     font-size: 20px;
+
 }
 
 .listing{
