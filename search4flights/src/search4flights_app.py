@@ -11,6 +11,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+
 with open('db_config.pkl', 'rb') as db_config:
    app.config['dbconfig'] = pickle.load(db_config)
 
@@ -57,7 +58,6 @@ with open('flights_config.pkl', 'rb') as flights_config:
 
 
 
-
 def get_http_request():
     url = 'http://www.azair.eu/azfin.php?searchtype=flexi&isOneway=return'
     url += '&srcAirport=' + app.config['flightsconfig']['srcAirport']
@@ -82,18 +82,13 @@ def get_http_request():
     url += '&maxChng=' + app.config['flightsconfig']['maxChng']
     url += '&currency=' + app.config['flightsconfig']['currency']
     url += '&indexSubmit=Szukaj'
-    # print(url)
     http_response = requests.get(url)
-    # with open('html_sample_project.txt', 'w', encoding='utf-8') as html_sample:
-    #     print(http_response.text, file=html_sample)
     soup = BeautifulSoup(http_response.text, 'html5lib')
     flights_results = soup.find_all('div', attrs={'class':'result'})
-    #print(flights_results[0])
 
 
 
     for flight_result in flights_results:
-        # TODO dodac do struktury danych
 
         # Loading DEPARTURE PLACE (airport) and DEPARTURE HOUR (when departing)
         res = flight_result.find_all('span', attrs={'class': 'from'})
@@ -124,14 +119,9 @@ def get_http_request():
 
         # Creating a FLIGHT ROUTE NAME based on dep and arr places end length of stay
         flight_route_name = dep_place + '-' + arr_place + ':' + len_stay
-        # print('Flight name: ' + flight_route_name)
-        # print('Departure hours: ' + dep_hours)
-        # print('Return hours: ' +return_hours)
 
         # Checking if table of this route exists in DB
         # If not the new one is created
-
-
 
         try:
             with UseDatabase(app.config['dbconfig']) as cursor:
@@ -177,11 +167,9 @@ def get_http_request():
         # Loading DEPARTURE DATE
         res = flight_result.find_all('span', attrs={'class': 'date'})
         dep_date = res[0].text.replace('/', '-')
-        # print('Departure date: '+dep_date)
 
         # Loading RETURN DATE
         return_date = res[1].text.replace('/', '-')
-        # print('return date: ' +return_date)
 
         # Checking the database table whether this particular flight already exists in it
         # If it exists program checks the price and updates record in database if it changed
@@ -206,11 +194,9 @@ def get_http_request():
                 for i in range (0, len(dep_numbs)):
                     if(dep_flight_numb==dep_numbs[i] and ret_flight_numb==ret_numbs[i] and dep_date==dep_dates[i] and dep_hours==depart_hours[i] and return_date==ret_dates[i] and return_hours==ret_hours[i]):
                         if(price != prices[i]):
-                            #print('cena sie zmienila')
                             _SQL = 'UPDATE `' + flight_route_name +'` SET Price=\'' + str(price) +'\' WHERE id=' + str(ids[i])
                             cursor.execute(_SQL)
                         else:
-                            # print('cena sie NIE zmienila')
                             _SQL = 'UPDATE `' + flight_route_name + '` SET Price=\'' + str(prices[i]+1) + '\' WHERE id=' + str(ids[i])
                             cursor.execute(_SQL)
                             _SQL = 'UPDATE `' + flight_route_name + '` SET Price=\'' + str(prices[i]-1) + '\' WHERE id=' + str(ids[i])
@@ -224,21 +210,13 @@ def get_http_request():
                     text = res[0].text.split('/')
                     travel_time_dep = text[0]
                     changes_dep = text[1]
-                    # print('Travel time departure: ' +travel_time_dep)
-                    # print('Departure CHanges: ' +changes_dep)
 
                     # Loading TRAVEL TIME and NUMBE OF CHANGES for RETURN FLIGHT
                     text = res[1].text.split('/')
                     travel_time_return = text[0]
                     changes_return = text[1]
-                    # print('TRavel time return: ' +travel_time_return)
-                    # print('Return changes: ' +changes_return)
 
 
-
-
-                    # print('Price: ' +price)
-                    # print('')
                     _SQL = 'INSERT INTO `' + flight_route_name + """` 
                     (`Departure_place`, `Departure_flight_numb`, 
                     `Departure_date`, `Departure_hours`, `Departure_changes`, 
@@ -424,11 +402,49 @@ def filter_flights_results() -> 'html':
 
 @app.route('/delete_flights')
 def delete_flights_page() -> 'html':
-
     return render_template('delete_flights.html',
                            the_title='Flight Search Engine')
 
 
+@app.route('/delete_flights_data', methods=['POST'])
+def delete_flights_data() -> 'html':
+
+    if request.method == 'POST':
+        if request.form['delete_btn'] == 'DELETE ALL':
+            with UseDatabase(app.config['dbconfig']) as cursor:
+                _SQL = 'SHOW TABLES'
+                cursor.execute(_SQL)
+                contents = cursor.fetchall()
+                flights_routes = [route[0] for route in contents]
+                _SQL = 'DROP TABLES'
+                for flights_route in flights_routes:
+                    if flights_route == flights_routes[0]:
+                        _SQL += ' `' + flights_route + '`'
+                    else:
+                        _SQL += ', `' + flights_route + '`'
+                cursor.execute(_SQL)
+
+
+        elif request.form['delete_btn'] == 'DELETE TABLES':
+            with UseDatabase(app.config['dbconfig']) as cursor:
+                _SQL = 'SHOW TABLES WHERE Tables_in_'+app.config['dbconfig']['database'] + ' LIKE ' + """
+                \'%""" + request.form['arr_place'] + '%\' AND Tables_in_'+app.config['dbconfig']['database'] + ' LIKE ' + """
+                \'%""" + request.form['dst_place'] + '%\''
+
+
+                cursor.execute(_SQL)
+                contents = cursor.fetchall()
+                flights_routes = [route[0] for route in contents]
+                _SQL = 'DROP TABLES'
+                for flights_route in flights_routes:
+                    if flights_route == flights_routes[0]:
+                        _SQL += ' `' + flights_route + '`'
+                    else:
+                        _SQL += ', `' + flights_route + '`'
+                cursor.execute(_SQL)
+
+    return delete_flights_page()
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader = False)

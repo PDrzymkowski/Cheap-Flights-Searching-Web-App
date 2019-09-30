@@ -2,8 +2,25 @@
 
 {% block body %} 
 
-<h2>Choose your action: </h2>
+<h2>Here you can delete your database contents: </h2>
+
+<form method="POST" action="/delete_flights_data">
+
+<table>
+
+    <p>To delete ALL the contents of your database: </p>
+    <p><input value="DELETE ALL" name="delete_btn" type="SUBMIT"></p>
+
+    <p>To delete the results tables based on arrival/destination places: </p>
+    <p><input name="arr_place" type="text" value="" placeholder="If no place is put, all will be considered"></p>
+    <p><input name="dst_place" type="text" value="" placeholder="ex. Barcelona BCN"></p>
+    <p><input value="DELETE TABLES" name="delete_btn" type="SUBMIT"></p>
 
 
+</table>
+
+
+
+</form>
 
 {% endblock %}
