@@ -4,11 +4,12 @@
         {% endblock %}
 
         {% block back_home %}
-                <a href="../flights_list">Back to flights list</a>
+                <a href="../flights_list" class="home_label">Back to flights list</a>
         {% endblock %}
 
 {% block body %}
 
+<div class="bordered_results">
 <h2>Here are the results of your query:</h2>
 
 <div class="listing_results">
@@ -28,4 +29,5 @@
         {% endfor %}
 </table>
 </div>
+    </div>
 {% endblock %}

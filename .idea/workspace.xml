@@ -4,7 +4,8 @@
     <list default="true" id="97631274-73a4-4836-9eb4-6936ef852fbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search4flights/src/static/hf.css" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/static/hf.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/filter_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/filter_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search4flights/src/templates/flights_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/search4flights/src/templates/flights_results.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

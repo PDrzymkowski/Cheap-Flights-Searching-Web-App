@@ -15,7 +15,7 @@ body {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
     border-style: outset;
     width: 800px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 9px;
     margin: 10px 10px 10px;
     border-radius: 20px;
 }
@@ -23,13 +23,32 @@ body {
 .bordered_entry{
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
     width: 600px;
-    height: 250px;
+    height: 300px;
     border-style: outset;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 8px;
     margin: 10px 10px 10px;
     border-radius: 20px;
 }
 
+.bordered_results{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
+    width: 110%;
+    height: 300px;
+    border-style: outset;
+    padding: 5px 5px 5px 8px;
+    margin: 10px 10px 10px;
+    border-radius: 20px;
+}
+
+.bordered_results_filtered{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,177,175,0.5383287103904062) 80%);
+    width: 110%;
+    height: 100%;
+    border-style: outset;
+    padding: 5px 5px 5px 8px;
+    margin: 10px 10px 10px;
+    border-radius: 20px;
+}
 .home_label{
      color: white;
      font-size: 20px;
@@ -73,7 +92,13 @@ a {
   margin: 0 0 10px 0;
 }
 li {
-  margin: 0 0 10px 0;
+  margin: 5px 10px 0 0;
+  background: linear-gradient(175deg, rgba(255,255,255,1) 0%, rgba(102,106,116,0.7091970577293417) 96%);
+  border-style: groove;
+  border-radius: 5px;
+  width: 400px;
+  padding: 2px 3px 2px 3px;
+
 
 }
 
@@ -131,6 +156,7 @@ input[type=text] {
 }
 input[type=submit] {
   font-size:        125%;
+  border-radius:    12px;
 }
 select {
   font-size:        125%;

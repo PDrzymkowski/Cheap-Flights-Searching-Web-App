@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
         {% block back_home %}
-                <a href="filter_flights">Back to flights list</a>
+                <a href="filter_flights" class="home_label">Back to flights list</a>
         {% endblock %}
 
 {% block body %}
-
+<div class="bordered_results_filtered">
 <h2>Here are the results of your query (flights under price {{ the_max_price }}):</h2>
 
 <div class="listing_filtered">
@@ -26,5 +26,5 @@
     {% endfor %}
 </table>
 </div>
-
+</div>
 {% endblock %}
